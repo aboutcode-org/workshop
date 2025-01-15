@@ -49,8 +49,7 @@ body:
       label: License
       description: What license is used for your tool?
       options:
-        -
-        default: 0
+        - More to be added
           required: true
   - type: checkboxes
     id: features
