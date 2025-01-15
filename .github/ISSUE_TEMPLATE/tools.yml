@@ -1,0 +1,100 @@
+name: FOSS Compliance Tools
+description: Add your tool.
+title: "[FOSS Compliance Tools]: "
+labels: ["community"]
+projects: ["aboutcode-org/17"]
+assignees:
+  - 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this form! This data will be used as a shared, public record of the features and capabilities of different FOSS tools for compliance.
+  - type: input
+    id: project
+    attributes:
+      label: project
+      description: What is the name of your FOSS tool for compliance?
+      placeholder: ex. FOSS Tool for Compliance
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can someone get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: website
+      description: Where can someone get more information?
+      placeholder: ex. https://fosscompliancetool.org
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: summary
+      description: Please provide a brief summary of your tool.
+      placeholder: Tell us all about it!
+      value: 
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: License
+      description: What license is used for your tool?
+      options:
+        -
+        default: 0
+          required: true
+  - type: checkboxes
+    id: features
+    attributes:
+      label: features
+      description: What features does your tool provide?
+      options:
+        - Software identification
+        - Vulnerability identification
+        - 
+        - Alerting
+        - Compliance automation
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+
+  - type: checkboxes
+    id: FOSS
+    attributes:
+      label: FOSS?
+      description: By submitting this, you confirm that the tool and information shared is distributed with a free and open source license. 
+      options:
+        - label: I confirm the tool is FOSS
+          required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this, you agree to follow our [Code of Conduct](https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
