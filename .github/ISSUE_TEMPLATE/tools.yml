@@ -49,8 +49,11 @@ body:
       label: License
       description: What license is used for your tool?
       options:
+        - MIT
         - More to be added
-          required: true
+      default: 0
+    validations:
+      required: true
   - type: checkboxes
     id: features
     attributes:
@@ -59,9 +62,9 @@ body:
       options:
         - Software identification
         - Vulnerability identification
-        - 
         - Alerting
         - Compliance automation
+        - More to be added
     validations:
       required: true
   - type: dropdown
