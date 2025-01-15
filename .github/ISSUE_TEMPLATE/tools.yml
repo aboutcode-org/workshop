@@ -3,8 +3,6 @@ description: Add your tool.
 title: "[FOSS Compliance Tools]: "
 labels: ["community"]
 projects: ["aboutcode-org/17"]
-assignees:
-  - 
 body:
   - type: markdown
     attributes:
@@ -14,7 +12,7 @@ body:
     id: project
     attributes:
       label: project
-      description: What is the name of your FOSS tool for compliance?
+      description: "What is the name of your FOSS tool for compliance?"
       placeholder: ex. FOSS Tool for Compliance
     validations:
       required: true
