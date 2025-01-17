@@ -32,7 +32,7 @@ body:
       placeholder: ex. https://fosscompliancetool.org
     validations:
       required: true
-- type: input
+  - type: input
     id: code_view_url
     attributes:
       label: Repo
@@ -40,7 +40,7 @@ body:
       placeholder: ex. https://github.com/repo
     validations:
       required: true
-- type: input
+  - type: input
     id: license_expression
     attributes:
       label: License
@@ -58,7 +58,7 @@ body:
         This is a brief summary of the tool.
     validations:
       required: true
-- type: input
+  - type: input
     id: primary_language
     attributes:
       label: Language
@@ -73,64 +73,53 @@ body:
       description: What capabalities does your tool provide? List is based on capabilities defined by (OpenChain Project Tooling Work Group)(https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
       options:
         - label: Resolve dependencies
-                - label: Analyze package manifests
-                        - label: Analyze package files
-                                - label: Analyze containers
-                                        - label: Analyze binaries
-                                                - label: Analyze ELF binaries
-                                                        - label: Analyze Windows binaries
-                                                                - label: Download source package
-                                                                        - label: Analyze source code
-                                                                                - label: Inventory for packages and components
-                                                                                        - label: License obligations database
-                                                                                                - label: Scan for copyright
-                                                                                                        - label: Scan for license
-                                                                                                                - label: Analyze forensic code
-                                                                                                                        - label: Check policies
-                                                                                                                                - label: Obligation fulfillment
-                                                                                                                                        - label: Generate compliance documents
-                                                                                                                                                - label: Consistent artifact compliance
+        - label: Analyze package manifests
+        - label: Analyze package files
+        - label: Analyze containers
+        - label: Analyze binaries
+        - label: Analyze ELF binaries
+        - label: Analyze Windows binaries
+        - label: Download source package
+        - label: Analyze source code
+        - label: Inventory for packages and components
+        - label: License obligations database
+        - label: Scan for copyright
+        - label: Scan for license
+        - label: Analyze forensic code
+        - label: Check policies
+        - label: Obligation fulfillment
+        - label: Generate compliance documents
+        - label: Consistent artifact compliance
   - type: textarea
     id: capabilities_other
     attributes:
       label: Other capabilities?
       description: List other capabilities not included above.
-      placeholder: 
-      value:
-    validations:
-      - type: textarea
+  - type: textarea
     id: roadmap_short
     attributes:
       label: Short-term Roadmap
       description: Please list what is planned for your tool in the next 3-6 months. You can also include a URL if there is a public roadmap available.
-      placeholder: 
-      value:
-    validations:
-          - type: textarea
+  - type: textarea
     id: roadmap_long
     attributes:
       label: Long-term Roadmap
       description: Please list what is planned for your tool after the next 6 months. You can also include a URL if there is a public roadmap available.
-      placeholder: 
-      value:
-    validations:
- - type: checkboxes
+  - type: checkboxes
     id: features_commercial
     attributes:
       label: Is there a commercial version of your tool that provides additional features for users? 
-      description: 
       options:
         - label: Yes
-        - labe: No
+        - label: No
           required: true
-           - type: checkboxes
+  - type: checkboxes
     id: data_commercial
     attributes:
       label: Does your tool use proprietary data sources? 
-      description: 
       options:
         - label: Yes
-        - labe: No
+        - label: No
           required: true
   - type: checkboxes
     id: FOSS
@@ -148,7 +137,7 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
-           - type: checkboxes
+  - type: checkboxes
     id: sharing
     attributes:
       label: Data sharing
