@@ -38,7 +38,8 @@ body:
       label: summary
       description: Please provide a brief summary of your tool.
       placeholder: Tell us all about it!
-      value: 
+      value: |
+        This is a brief summary of the tool.
     validations:
       required: true
   - type: dropdown
@@ -58,12 +59,11 @@ body:
       label: features
       description: What features does your tool provide?
       options:
-        - Software identification
-        - Vulnerability identification
-        - Alerting
-        - Compliance automation
-        - More to be added
-      required: true
+        - label: Software identification
+        - label: Vulnerability identification
+        - label: Alerting
+        - label: Compliance automation
+        - label: More to be added
   - type: checkboxes
     id: FOSS
     attributes:
