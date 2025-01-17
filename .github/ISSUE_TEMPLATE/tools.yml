@@ -1,13 +1,13 @@
 name: FOSS Compliance Tools
 description: Add your tool.
-title: "[FOSS Compliance Tools]: "
+title: "[Add the tool name.]: "
 labels: ["community"]
 projects: ["aboutcode-org/17"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this form! This data will be used as a shared, public record of the features and capabilities of different FOSS tools for compliance.
+        Thanks for taking the time to fill out this form! This data will be used as a shared, public record of the features and capabilities of different FOSS tools for compliance, with a [CC-BY-SA 4.0 license](https://scancode-licensedb.aboutcode.org/cc-by-sa-4.0.html).
   - type: input
     id: project
     attributes:
@@ -17,58 +17,126 @@ body:
     validations:
       required: true
   - type: input
-    id: contact
+    id: project_contact
     attributes:
-      label: Contact Details
-      description: How can someone get in touch with you if we need more info?
+      label: Contact e-mail
+      description: How can someone get in touch for more information?
       placeholder: ex. email@example.com
     validations:
       required: true
   - type: input
-    id: website
+    id: homepage_url
     attributes:
-      label: website
+      label: Homepage
       description: Where can someone get more information?
       placeholder: ex. https://fosscompliancetool.org
     validations:
       required: true
-  - type: textarea
-    id: summary
+- type: input
+    id: code_view_url
     attributes:
-      label: summary
-      description: Please provide a brief summary of your tool.
+      label: Repo
+      description: Where can someone see the code?
+      placeholder: ex. https://github.com/repo
+    validations:
+      required: true
+- type: input
+    id: license_expression
+    attributes:
+      label: License
+      description: Please list the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool
+      placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Summary
+      description: Please provide a brief summary of your tool - under 100 characters.
       placeholder: Tell us all about it!
       value: |
         This is a brief summary of the tool.
     validations:
       required: true
-  - type: dropdown
-    id: license
+- type: input
+    id: primary_language
     attributes:
-      label: License
-      description: What license is used for your tool?
-      options:
-        - MIT
-        - More to be added
-      default: 0
+      label: Language
+      description: What language is your tool written in?
+      placeholder: ex. Python
     validations:
       required: true
   - type: checkboxes
     id: features
     attributes:
-      label: features
-      description: What features does your tool provide?
+      label: capabilities
+      description: What capabalities does your tool provide? List is based on capabilities defined by (OpenChain Project Tooling Work Group)(https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
       options:
-        - label: Software identification
-        - label: Vulnerability identification
-        - label: Alerting
-        - label: Compliance automation
-        - label: More to be added
+        - label: Resolve dependencies
+                - label: Analyze package manifests
+                        - label: Analyze package files
+                                - label: Analyze containers
+                                        - label: Analyze binaries
+                                                - label: Analyze ELF binaries
+                                                        - label: Analyze Windows binaries
+                                                                - label: Download source package
+                                                                        - label: Analyze source code
+                                                                                - label: Inventory for packages and components
+                                                                                        - label: License obligations database
+                                                                                                - label: Scan for copyright
+                                                                                                        - label: Scan for license
+                                                                                                                - label: Analyze forensic code
+                                                                                                                        - label: Check policies
+                                                                                                                                - label: Obligation fulfillment
+                                                                                                                                        - label: Generate compliance documents
+                                                                                                                                                - label: Consistent artifact compliance
+  - type: textarea
+    id: capabilities_other
+    attributes:
+      label: Other capabilities?
+      description: List other capabilities not included above.
+      placeholder: 
+      value:
+    validations:
+      - type: textarea
+    id: roadmap_short
+    attributes:
+      label: Short-term Roadmap
+      description: Please list what is planned for your tool in the next 3-6 months. You can also include a URL if there is a public roadmap available.
+      placeholder: 
+      value:
+    validations:
+          - type: textarea
+    id: roadmap_long
+    attributes:
+      label: Long-term Roadmap
+      description: Please list what is planned for your tool after the next 6 months. You can also include a URL if there is a public roadmap available.
+      placeholder: 
+      value:
+    validations:
+ - type: checkboxes
+    id: features_commercial
+    attributes:
+      label: Is there a commercial version of your tool that provides additional features for users? 
+      description: 
+      options:
+        - label: Yes
+        - labe: No
+          required: true
+           - type: checkboxes
+    id: data_commercial
+    attributes:
+      label: Does your tool use proprietary data sources? 
+      description: 
+      options:
+        - label: Yes
+        - labe: No
+          required: true
   - type: checkboxes
     id: FOSS
     attributes:
       label: FOSS?
-      description: By submitting this, you confirm that the tool and information shared is distributed with a free and open source license. 
+      description: By submitting this, you confirm that the tool is distributed with a free and open source license. 
       options:
         - label: I confirm the tool is FOSS
           required: true
@@ -79,4 +147,12 @@ body:
       description: By submitting this, you agree to follow our [Code of Conduct](https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst). 
       options:
         - label: I agree to follow this project's Code of Conduct
+          required: true
+           - type: checkboxes
+    id: sharing
+    attributes:
+      label: Data sharing
+      description: By submitting this, you confirm that the data provided above is true and accurate and will be available as public and shareable open data, under a [CC-BY-SA 4.0 license](https://scancode-licensedb.aboutcode.org/cc-by-sa-4.0.html). 
+      options:
+        - label: I confirm the data accuracy and licensing
           required: true
