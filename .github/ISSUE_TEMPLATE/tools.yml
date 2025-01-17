@@ -66,30 +66,31 @@ body:
       placeholder: ex. Python
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: features
     attributes:
       label: capabilities
       description: What capabalities does your tool provide? List is based on capabilities defined by (OpenChain Project Tooling Work Group)(https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
+      multiple: true
       options:
-        - label: Resolve dependencies
-        - label: Analyze package manifests
-        - label: Analyze package files
-        - label: Analyze containers
-        - label: Analyze binaries
-        - label: Analyze ELF binaries
-        - label: Analyze Windows binaries
-        - label: Download source package
-        - label: Analyze source code
-        - label: Inventory for packages and components
-        - label: License obligations database
-        - label: Scan for copyright
-        - label: Scan for license
-        - label: Analyze forensic code
-        - label: Check policies
-        - label: Obligation fulfillment
-        - label: Generate compliance documents
-        - label: Consistent artifact compliance
+        - Resolve dependencies
+        - Analyze package manifests
+        - Analyze package files
+        - Analyze containers
+        - Analyze binaries
+        - Analyze ELF binaries
+        - Analyze Windows binaries
+        - Download source package
+        - Analyze source code
+        - Inventory for packages and components
+        - License obligations database
+        - Scan for copyright
+        - Scan for license
+        - Analyze forensic code
+        - Check policies
+        - Obligation fulfillment
+        - Generate compliance documents
+        - Consistent artifact compliance
   - type: textarea
     id: capabilities_other
     attributes:
@@ -108,19 +109,17 @@ body:
   - type: checkboxes
     id: features_commercial
     attributes:
-      label: Is there a commercial version of your tool that provides additional features for users? 
+      label: commercial features?
+      description: Is there a commercial version of your tool that provides additional features for users? 
       options:
-        - label: Yes
-        - label: No
-          required: true
+        - label: Yes, the tool has a commercial version with additional features
   - type: checkboxes
     id: data_commercial
     attributes:
-      label: Does your tool use proprietary data sources? 
+      label: proprietary data?
+      description: Does your tool use proprietary data sources? 
       options:
-        - label: Yes
-        - label: No
-          required: true
+        - label: Yes, the tools uses proprietary data sources
   - type: checkboxes
     id: FOSS
     attributes:
