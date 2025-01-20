@@ -11,48 +11,42 @@ body:
   - type: input
     id: project
     attributes:
-      label: project
-      description: "What is the name of your FOSS tool for compliance?"
+      label: What is the name of your FOSS tool for compliance?
       placeholder: ex. FOSS Tool for Compliance
     validations:
       required: true
   - type: input
     id: project_contact
     attributes:
-      label: Contact e-mail
-      description: How can someone get in touch for more information?
+      label: How can someone get in touch for more information?
       placeholder: ex. email@example.com
     validations:
       required: true
   - type: input
     id: homepage_url
     attributes:
-      label: Homepage
-      description: Where can someone get more information?
+      label: What is your project's homepage?
       placeholder: ex. https://fosscompliancetool.org
     validations:
       required: true
   - type: input
     id: code_view_url
     attributes:
-      label: Repo
-      description: Where can someone see the code?
+      label: Where is your project's code hosted?
       placeholder: ex. https://github.com/repo
     validations:
       required: true
   - type: input
     id: license_expression
     attributes:
-      label: License
-      description: Please list the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool
+      label: Please write the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool
       placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Summary
-      description: Please provide a brief summary of your tool - under 100 characters.
+      label: Please provide a brief summary of your tool - under 100 characters.
       placeholder: Tell us all about it!
       value: |
         This is a brief summary of the tool.
@@ -61,16 +55,14 @@ body:
   - type: input
     id: primary_language
     attributes:
-      label: Language
-      description: What language is your tool written in?
+      label: What language is your tool written in?
       placeholder: ex. Python
     validations:
       required: true
   - type: dropdown
     id: features
     attributes:
-      label: capabilities
-      description: What capabalities does your tool provide? List is based on capabilities defined by (OpenChain Project Tooling Work Group)(https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
+      label: What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
       multiple: true
       options:
         - Resolve dependencies
@@ -94,29 +86,25 @@ body:
   - type: textarea
     id: capabilities_other
     attributes:
-      label: Other capabilities?
-      description: List other capabilities not included above.
+      label: List other capabilities not included above. 
   - type: textarea
     id: roadmap_short
     attributes:
-      label: Short-term Roadmap
-      description: Please list what is planned for your tool in the next 3-6 months. You can also include a URL if there is a public roadmap available.
+      label: Short-term roadmap: What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available.
   - type: textarea
     id: roadmap_long
     attributes:
-      label: Long-term Roadmap
-      description: Please list what is planned for your tool after the next 6 months. You can also include a URL if there is a public roadmap available.
+      label: Long-term roadmap: What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available.
   - type: checkboxes
     id: features_commercial
     attributes:
-      label: commercial features?
-      description: Is there a commercial version of your tool that provides additional features for users? 
+      label: Is there a commercial version of your tool that provides additional features for users? 
       options:
         - label: Yes, the tool has a commercial version with additional features
   - type: checkboxes
     id: data_commercial
     attributes:
-      label: proprietary data?
+      label: Proprietary data?
       description: Does your tool use proprietary data sources? 
       options:
         - label: Yes, the tools uses proprietary data sources
