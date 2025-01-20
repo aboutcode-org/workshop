@@ -37,14 +37,14 @@ body:
     attributes:
       label: Repo
       description: Where can someone see the code?
-      placeholder: ex. https://github.com/repo
+      placeholder: ex. https://github.com/org/repo
     validations:
       required: true
   - type: input
     id: license_expression
     attributes:
       label: License
-      description: Please list the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool
+      description: Please add the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool
       placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
     validations:
       required: true
@@ -52,45 +52,58 @@ body:
     id: description
     attributes:
       label: Summary
-      description: Please provide a brief summary of your tool - under 100 characters.
+      description: Please provide a brief summary of your tool - ideally under 100 characters.
       placeholder: Tell us all about it!
       value: |
         This is a brief summary of the tool.
     validations:
       required: true
   - type: input
-    id: primary_language
+    id: primary_languages
     attributes:
-      label: Language
-      description: What language is your tool written in?
-      placeholder: ex. Python
+      label: Languages
+      description: What languages is your tool written in?
+      placeholder: ex. Python, Javascript
     validations:
       required: true
-  - type: dropdown
+  - type: checkboxes
     id: features
     attributes:
       label: capabilities
       description: What capabalities does your tool provide? List is based on capabilities defined by (OpenChain Project Tooling Work Group)(https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
-      multiple: true
       options:
-        - Resolve dependencies
-        - Analyze package manifests
-        - Analyze package files
-        - Analyze containers
-        - Analyze binaries
-        - Analyze ELF binaries
-        - Analyze Windows binaries
-        - Download source package
-        - Analyze source code
-        - Inventory for packages and components
-        - License obligations database
-        - Scan for copyright
-        - Scan for license
-        - Analyze forensic code
-        - Check policies
-        - Obligation fulfillment
-        - Generate compliance documents
-        - Consistent artifact compliance
+        - label: Resolve dependencies
+        - label: Analyze package manifests
+        - label: Analyze package files
+        - label: Analyze containers
+        - label: Analyze binaries
+        - label: Analyze ELF binaries
+        - label: Analyze Windows binaries
+        - label: Download source package
+        - label: Analyze source code
+        - label: Inventory for packages and components
+        - label: License obligations database
+        - label: Scan for copyright
+        - label: Scan for license
+        - label: Analyze code statically for issues
+        - label: Define and check against policies
+        - label: Obligation fulfillment
+        - label: Generate compliance documents
+        - label: Consistent artifact compliance
+        - label: Generates SPDX SBOMs
+        - label: Generates CycloneDx SBOMs
+        - label: Generated VEX information
+        - label: Looks for vulneribilities in packages 
+        - label: Uses PackageURL identifiers
+        - label: Supports showing/scanning the dependency graph
+        - label: Supports running in CI/CD pipelines
+        - label: Supports deployment as containers (Docker/k8s/etc)
+        - label: Supports use as a library
+  - type: textarea
+    id: supported_ecosystems
+    attributes:
+      label: Ecosystems supported?
+      description: List all supported ecosystems by [packageurl types](https://github.com/package-url/purl-spec/blob/master/PURL-TYPES.rst).
   - type: textarea
     id: capabilities_other
     attributes:
