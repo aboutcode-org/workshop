@@ -90,11 +90,11 @@ body:
   - type: textarea
     id: roadmap_short
     attributes:
-      label: Short-term roadmap: What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available.
+      label: "Short-term roadmap: What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
   - type: textarea
     id: roadmap_long
     attributes:
-      label: Long-term roadmap: What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available.
+      label: "Long-term roadmap: What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
   - type: checkboxes
     id: features_commercial
     attributes:
