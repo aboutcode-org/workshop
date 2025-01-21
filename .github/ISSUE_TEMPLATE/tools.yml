@@ -1,6 +1,6 @@
 name: FOSS Compliance Tools
 description: Add your tool.
-title: "[Add the tool name.]: "
+title: "Add the tool name"
 labels: ["community"]
 projects: ["aboutcode-org/17"]
 body:
@@ -9,126 +9,107 @@ body:
       value: |
         Thanks for taking the time to fill out this form! This data will be used as a shared, public record of the features and capabilities of different FOSS tools for compliance, with a [CC-BY-SA 4.0 license](https://scancode-licensedb.aboutcode.org/cc-by-sa-4.0.html).
   - type: input
-    id: project
-    attributes:
-      label: What is the name of your FOSS tool for compliance?
-      placeholder: ex. FOSS Tool for Compliance
-    validations:
-      required: true
-  - type: input
     id: project_contact
     attributes:
-      label: How can someone get in touch for more information?
+      label: "project_contact: How can someone get in touch for more information?"
       placeholder: ex. email@example.com
     validations:
       required: true
   - type: input
     id: homepage_url
     attributes:
-      label: What is your project's homepage?
+      label: "homepage_url: What is your project's homepage?"
       placeholder: ex. https://fosscompliancetool.org
     validations:
       required: true
   - type: input
     id: code_view_url
     attributes:
-      label: Where is your project's code hosted?
-      placeholder: ex. https://github.com/repo
+      label: "code_view_url: Where is your project's code hosted?"
+      placeholder: ex. https://github.com/org/repo
     validations:
       required: true
   - type: input
     id: license_expression
     attributes:
-      label: Please write the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool
+      label: "license_expression: Please add the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool"
       placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
-      label: Please provide a brief summary of your tool - under 100 characters.
+      label: "description: Please provide a brief summary of your tool - under 100 characters."
       placeholder: Tell us all about it!
       value: |
         This is a brief summary of the tool.
     validations:
       required: true
   - type: input
-    id: primary_language
+    id: primary_languages
     attributes:
-      label: What language is your tool written in?
-      placeholder: ex. Python
+      label: "primary_languages: What languages is your tool written in?"
+      placeholder: ex. Python, Javascript
     validations:
       required: true
-  - type: dropdown
-    id: features
+  - type: checkboxes
+    id: capabilities
     attributes:
-      label: What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities).
+      label: "capabilities_other: What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
       multiple: true
       options:
-        - Resolve dependencies
-        - Analyze package manifests
-        - Analyze package files
-        - Analyze containers
-        - Analyze binaries
-        - Analyze ELF binaries
-        - Analyze Windows binaries
-        - Download source package
-        - Analyze source code
-        - Inventory for packages and components
-        - License obligations database
-        - Scan for copyright
-        - Scan for license
-        - Analyze forensic code
-        - Check policies
-        - Obligation fulfillment
-        - Generate compliance documents
-        - Consistent artifact compliance
+        - label: Resolve dependencies
+        - label: Analyze package manifests
+        - label: Analyze package files
+        - label: Analyze containers
+        - label: Analyze binaries
+        - label: Analyze ELF binaries
+        - label: Analyze Windows binaries
+        - label: Download source package
+        - label: Analyze source code
+        - label: Inventory for packages and components
+        - label: License obligations database
+        - label: Scan for copyright
+        - label: Scan for license
+        - label: Analyze code statically for issues
+        - label: Define and check against policies
+        - label: Obligation fulfillment
+        - label: Generate compliance documents
+        - label: Consistent artifact compliance
+        - label: Generates SPDX SBOMs
+        - label: Generates CycloneDx SBOMs
+        - label: Generated VEX information
+        - label: Looks for vulneribilities in packages 
+        - label: Uses PackageURL identifiers
+        - label: Supports showing/scanning the dependency graph
+        - label: Supports running in CI/CD pipelines
+        - label: Supports deployment as containers (Docker/k8s/etc)
+        - label: Supports use as a library
   - type: textarea
     id: capabilities_other
     attributes:
-      label: List other capabilities not included above. 
+      label: "capabilities_other: List other capabilities not included above." 
   - type: textarea
     id: roadmap_short
     attributes:
-      label: "Short-term roadmap: What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
+      label: "roadmap_short: What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
   - type: textarea
     id: roadmap_long
     attributes:
-      label: "Long-term roadmap: What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
+      label: "roadmap_long: What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
   - type: checkboxes
     id: features_commercial
     attributes:
-      label: Is there a commercial version of your tool that provides additional features for users? 
+      label: "features_commercial: Is there a commercial version of your tool that provides additional features for users?" 
       options:
         - label: Yes, the tool has a commercial version with additional features
   - type: checkboxes
     id: data_commercial
     attributes:
-      label: Proprietary data?
-      description: Does your tool use proprietary data sources? 
+      label: "data_commercial: Does your tool use proprietary data sources?" 
       options:
         - label: Yes, the tools uses proprietary data sources
-  - type: checkboxes
-    id: FOSS
+  - type: markdown
     attributes:
-      label: FOSS?
-      description: By submitting this, you confirm that the tool is distributed with a free and open source license. 
-      options:
-        - label: I confirm the tool is FOSS
-          required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this, you agree to follow our [Code of Conduct](https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
-  - type: checkboxes
-    id: sharing
-    attributes:
-      label: Data sharing
-      description: By submitting this, you confirm that the data provided above is true and accurate and will be available as public and shareable open data, under a [CC-BY-SA 4.0 license](https://scancode-licensedb.aboutcode.org/cc-by-sa-4.0.html). 
-      options:
-        - label: I confirm the data accuracy and licensing
-          required: true
+      value: |
+        By submitting this form, you confirm that the data provided above is accurate and agree to follow our [Code of Conduct](https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst).
