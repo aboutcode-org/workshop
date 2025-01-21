@@ -106,7 +106,7 @@ body:
   - type: textarea
     id: capabilities_other
     attributes:
-      label: "capabilities_other'
+      label: "capabilities_other"
       description: "List other capabilities not included above." 
   - type: textarea
     id: roadmap_short
