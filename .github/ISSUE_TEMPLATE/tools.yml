@@ -4,22 +4,21 @@ description: |
  This data forms an open summary of your tool features, under CC-BY-SA-4.0 license.
 
 
-# title: "Tool name: "
+title: "Tool name: "
 
 labels: ["community"]
 projects: ["aboutcode-org/17"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this form! This data will be used as a shared, public record of the features and capabilities of different FOSS tools for compliance, with a [CC-BY-SA 4.0 license](https://scancode-licensedb.aboutcode.org/cc-by-sa-4.0.html).
+
   - type: input
-    id: project_contact
+    id: project_email_contact
     attributes:
-      label: "project_contact: How can someone get in touch for more information?"
+      label: "project_email_contact"
+      description: "How can someone get in touch for more information?"
       placeholder: ex. email@example.com
     validations:
       required: true
+
   - type: input
     id: homepage_url
     attributes:
@@ -27,6 +26,7 @@ body:
       placeholder: ex. https://fosscompliancetool.org
     validations:
       required: true
+
   - type: input
     id: code_view_url
     attributes:
@@ -34,6 +34,7 @@ body:
       placeholder: ex. https://github.com/org/repo
     validations:
       required: true
+
   - type: input
     id: license_expression
     attributes:
@@ -41,6 +42,7 @@ body:
       placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
     validations:
       required: true
+
   - type: textarea
     id: description
     attributes:
@@ -48,6 +50,7 @@ body:
       placeholder: Tell us all about it!
     validations:
       required: true
+
   - type: input
     id: primary_languages
     attributes:
@@ -55,6 +58,7 @@ body:
       placeholder: ex. Python, Javascript
     validations:
       required: true
+
   - type: checkboxes
     id: capabilities
     attributes:
