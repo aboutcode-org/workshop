@@ -74,7 +74,7 @@ body:
       label: "capabilities_other"
       description: "What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
       options:
-              - label: Analyze binaries
+        - label: Analyze binaries
         - label: Analyze code statically for issues
         - label: Analyze containers
         - label: Analyze ELF binaries
