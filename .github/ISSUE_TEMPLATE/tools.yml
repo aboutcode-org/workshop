@@ -111,7 +111,7 @@ body:
   - type: textarea
     id: roadmap_short
     attributes:
-      label: "roadmap_short
+      label: "roadmap_short"
       description: "What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
   - type: textarea
     id: roadmap_long
