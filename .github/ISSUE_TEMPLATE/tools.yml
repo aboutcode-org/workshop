@@ -1,6 +1,7 @@
 name: FOSS Compliance Tools
 description: Add your tool.
 title: "Add the tool name"
+title: "[Replace with the tool name]: "
 labels: ["community"]
 projects: ["aboutcode-org/17"]
 body:
@@ -41,8 +42,6 @@ body:
     attributes:
       label: "description: Please provide a brief summary of your tool - under 100 characters."
       placeholder: Tell us all about it!
-      value: |
-        This is a brief summary of the tool.
     validations:
       required: true
   - type: input
