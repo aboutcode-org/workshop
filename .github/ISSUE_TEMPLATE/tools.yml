@@ -1,7 +1,6 @@
 name: Add FOSS Compliance Tool
 description: |
- Add your tool with this form, title is your tool name.'
- This data forms an open summary of your tool features, under CC-BY-SA-4.0 license.
+ Use this issue template to add your tool.  
 
 
 title: "Tool name: "
@@ -9,6 +8,11 @@ title: "Tool name: "
 labels: ["community"]
 projects: ["aboutcode-org/17"]
 body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filling out this form! The data will be included in a FOSS compliance tool landscape, shared as a digital commons under a CC-BY-SA-4.0 license.
 
   - type: input
     id: project_email_contact
@@ -22,7 +26,8 @@ body:
   - type: input
     id: homepage_url
     attributes:
-      label: "homepage_url: What is your project's homepage?"
+      label: "homepage_url"
+      description: "What is your project's homepage?"
       placeholder: ex. https://fosscompliancetool.org
     validations:
       required: true
@@ -30,7 +35,8 @@ body:
   - type: input
     id: code_view_url
     attributes:
-      label: "code_view_url: Where is your project's code hosted?"
+      label: "code_view_url"
+      description: "Where is your project's code hosted?"
       placeholder: ex. https://github.com/org/repo
     validations:
       required: true
@@ -38,15 +44,17 @@ body:
   - type: input
     id: license_expression
     attributes:
-      label: "license_expression: Please add the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool"
+      label: "license_expression"
+      description: "Please add the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool"
       placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
     validations:
       required: true
 
   - type: textarea
-    id: description
+    id: summary
     attributes:
-      label: "description: Please provide a brief summary of your tool - under 100 characters."
+      label: "summary"
+      description: "Please provide a brief summary of your tool - under 100 characters."
       placeholder: Tell us all about it!
     validations:
       required: true
@@ -54,7 +62,8 @@ body:
   - type: input
     id: primary_languages
     attributes:
-      label: "primary_languages: What languages is your tool written in?"
+      label: "primary_languages"
+      description: "What languages is your tool written in?"
       placeholder: ex. Python, Javascript
     validations:
       required: true
@@ -62,47 +71,53 @@ body:
   - type: checkboxes
     id: capabilities
     attributes:
-      label: "capabilities_other: What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
+      label: "capabilities_other"
+      description: "What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
       options:
-        - label: Resolve dependencies
-        - label: Analyze package manifests
-        - label: Analyze package files
+              - label: Analyze binaries
+        - label: Analyze code statically for issues
         - label: Analyze containers
-        - label: Analyze binaries
         - label: Analyze ELF binaries
-        - label: Analyze Windows binaries
-        - label: Download source package
+        - label: Analyze package files
+        - label: Analyze package manifests
         - label: Analyze source code
+        - label: Analyze Windows binaries
+        - label: Define and check against policies
+        - label: Download source package
+        - label: Find vulnerabilities in packages 
+        - label: Fulfill compliance obligations
+        - label: Generate compliance documents
+        - label: Generate CycloneDx SBOMs
+        - label: Generate SPDX SBOMs
+        - label: Generate VEX information
         - label: Inventory for packages and components
         - label: License obligations database
+        - label: Provide database of license obligations
+        - label: Provide database of package metadata
+        - label: Provide database of vulnerabilities
+        - label: Resolve dependencies
         - label: Scan for copyright
         - label: Scan for license
-        - label: Analyze code statically for issues
-        - label: Define and check against policies
-        - label: Obligation fulfillment
-        - label: Generate compliance documents
-        - label: Consistent artifact compliance
-        - label: Generates SPDX SBOMs
-        - label: Generates CycloneDx SBOMs
-        - label: Generated VEX information
-        - label: Looks for vulneribilities in packages 
-        - label: Uses PackageURL identifiers
-        - label: Supports showing/scanning the dependency graph
-        - label: Supports running in CI/CD pipelines
-        - label: Supports deployment as containers (Docker/k8s/etc)
-        - label: Supports use as a library
+        - label: Support deployment as containers (Docker/k8s/etc)
+        - label: Support running in CI/CD pipelines
+        - label: Support showing/scanning the dependency graph
+        - label: Support use as a library
+        - label: Use Package-URL (PURL) identifiers
   - type: textarea
     id: capabilities_other
     attributes:
-      label: "capabilities_other: List other capabilities not included above." 
+      label: "capabilities_other'
+      description: "List other capabilities not included above." 
   - type: textarea
     id: roadmap_short
     attributes:
-      label: "roadmap_short: What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
+      label: "roadmap_short
+      description: "What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
   - type: textarea
     id: roadmap_long
     attributes:
-      label: "roadmap_long: What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
+      label: "roadmap_long"
+      description: "What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
   - type: checkboxes
     id: features_commercial
     attributes:
