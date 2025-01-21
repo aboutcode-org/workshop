@@ -56,7 +56,6 @@ body:
     id: capabilities
     attributes:
       label: "capabilities_other: What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
-      multiple: true
       options:
         - label: Resolve dependencies
         - label: Analyze package manifests
