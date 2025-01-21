@@ -1,8 +1,7 @@
 name: Add FOSS Compliance Tool
 description: |
- Add your tool by filling out this issue form. Use the title for the tool name.'
- This data will be a shared, public record of the features and capabilities of your FOSS tool
- for compliance, shared under CC-BY-SA-4.0 license.
+ Add your tool with this form, title is your tool name.'
+ This data forms an open summary of your tool features, under CC-BY-SA-4.0 license.
 
 
 # title: "Tool name: "
