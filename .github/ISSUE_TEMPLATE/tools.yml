@@ -1,6 +1,6 @@
 name: Add FOSS Compliance Tool
 description: |
- Use this issue template to add your tool.  
+ Use this issue template to add your tool. The data will be included in a FOSS compliance tool landscape, shared as a digital commons under a CC-BY-SA-4.0 license. 
 
 
 title: "Tool name: "
@@ -12,7 +12,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filling out this form! The data will be included in a FOSS compliance tool landscape, shared as a digital commons under a CC-BY-SA-4.0 license.
+        Add your tool's name as the title for this issue. 
 
   - type: input
     id: project_email_contact
@@ -55,7 +55,7 @@ body:
     attributes:
       label: "summary"
       description: "Please provide a brief summary of your tool - under 100 characters."
-      placeholder: Tell us all about it!
+      placeholder: Tell us all about your tool!
     validations:
       required: true
 
@@ -71,7 +71,7 @@ body:
   - type: checkboxes
     id: capabilities
     attributes:
-      label: "capabilities_other"
+      label: "capabilities"
       description: "What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
       options:
         - label: Analyze binaries
@@ -121,13 +121,15 @@ body:
   - type: checkboxes
     id: features_commercial
     attributes:
-      label: "features_commercial: Is there a commercial version of your tool that provides additional features for users?" 
+      label: "features_commercial"
+      description: "Is there a commercial version of your tool that provides additional features for users?" 
       options:
         - label: Yes, the tool has a commercial version with additional features
   - type: checkboxes
     id: data_commercial
     attributes:
-      label: "data_commercial: Does your tool use proprietary data sources?" 
+      label: "data_commercial"
+      description: "Does your tool use proprietary data sources?" 
       options:
         - label: Yes, the tools uses proprietary data sources
   - type: markdown
