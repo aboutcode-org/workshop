@@ -1,7 +1,12 @@
-name: FOSS Compliance Tools
-description: Add your tool.
-title: "Add the tool name"
-title: "[Replace with the tool name]: "
+name: Add FOSS Compliance Tool
+description: |
+ Add your tool by filling out this issue form. Use the title for the tool name.'
+ This data will be a shared, public record of the features and capabilities of your FOSS tool
+ for compliance, shared under CC-BY-SA-4.0 license.
+
+
+# title: "Tool name: "
+
 labels: ["community"]
 projects: ["aboutcode-org/17"]
 body:
