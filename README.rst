@@ -1,33 +1,45 @@
-================================
-   FOSS Compliance Tools
-================================
+====================================
+   All the FOSS Compliance Tools
+====================================
 
-This repo serves as a digital commons for content generated from the FOSS license and security
-compliance tools workshop before FOSDEM: https://workshop.aboutcode.org
+This repo is shared content from and for the FOSS license and security
+compliance tools workshop, before FOSDEM: https://workshop.aboutcode.org
 
-The main, emerging attraction is a structured list of FOSS compliance tools.
+The main, emerging attraction is a structured catalog of (eventually) all the FOSS compliance tools.
 
-To contribute your tool, submit a new "Add FOSS Compliance Tool" issue!
+To contribute your tool, submit a new "Add FOSS Compliance Tool" issue
+https://github.com/aboutcode-org/workshop/issues/new
 
-PRs are welcomed to improve the form.
+PRs are welcomed to improve the form!
 
 
 Usage
 =====
 
-The data is a list of structured issues to inventory summaries, links and features and capabilities
+For now, the data comes as a list of structured issues with summaries, links and features and capabilities
 of useful FOSS tools that help with license and security compliance.
 
-License
-=========
+See https://github.com/aboutcode-org/workshop/issues
 
-All data is under CC-BY-SA-4.0 with copyright shared by contributors.
+Next, we will create scripts to make this available in otehr formats (CSV, JSON)
+
+
+URLs
+~~~~~~~~~~
+
+- https://github.com/aboutcode-org/workshop
+- https://workshop.aboutcode.org
+
+License
+~~~~~~~~~~
+
+All data is contributed and shared under the CC-BY-SA-4.0 license with copyright shared by contributors.
+See https://github.com/aboutcode-org/workshop/blob/main/cc-by-sa-4.0.LICENSE
 
 
 Code of Conduct
-===================
+~~~~~~~~~~~~~~~~~
 
 Everyone attending the workshop, and interacting with this and other AboutCode repositories,
 codebases, issue trackers, chat rooms, forums and mailing lists is expected to follow the 
-AboutCode Code of Conduct.
-See https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst 
+AboutCode Code of Conduct:  https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst 
