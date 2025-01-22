@@ -98,11 +98,11 @@ body:
     id: capabilities
     attributes:
       label: "capabilities"
-      description: "What features and capabilities does your tool provide? This list is based very loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities). If this does not match your tool, use the other_capabilities input, or submit a PR to add more!"
+      description: "What features and capabilities does your tool provide? This list is based very loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities). If this does not match your tool, use the other_capabilities input, or submit a PR for `.github/ISSUE_TEMPLATE/tools.yml` to add more."
 
       options:
-        - label: Use Package-URL (PURL) identifiers
-        - label: Use SPDX license expressions
+        - label: Identifiers - Use Package-URL (PURL) identifiers
+        - label: Identifiers - Use SPDX license expressions
 
         - label: Scanning - Analyze package manifests and lockfiles
         - label: Scanning - Analyze package files
@@ -157,12 +157,12 @@ body:
         - label: Tracing - Trace code execution
         - label: Tracing - Trace build
 
-        - label: Analyze code statically (SAST/linting)
-        - label: Analyze code dynamically (DAST)
+        - label: Code Security - Analyze code statically (SAST/linting)
+        - label: Code Security - Analyze code dynamically (DAST)
 
-        - label: Download - source package
-        - label: Download - source repositories
-        - label: Download - binary package
+        - label: Download - Source package
+        - label: Download - Source repositories
+        - label: Download - Binary package
 
         - label: Deployment - Deployable as containers (Docker/OCI/k8s/etc)
         - label: Deployment - Deployable in CI/CD pipelines
