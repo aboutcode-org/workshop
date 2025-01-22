@@ -121,6 +121,8 @@ body:
 
         - label: Compliance - Generate CycloneDX SBOMs
         - label: Compliance - Generate SPDX SBOMs
+        - label: Compliance - Validate CycloneDX SBOM
+        - label: Compliance - Validate SPDX SBOMs
         - label: Compliance - Generate CycloneDX VEX
         - label: Compliance - Generate CSAF VEX
         - label: Compliance - Generate OpenVex
