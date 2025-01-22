@@ -21,7 +21,8 @@ of useful FOSS tools that help with license and security compliance.
 
 See https://github.com/aboutcode-org/workshop/issues
 
-Next, we will create scripts to make this available in otehr formats (CSV, JSON)
+Later, we will create scripts to make this available in other formats (CSV, JSON) and as a living
+FOSS compliance tool landscape.
 
 
 URLs
