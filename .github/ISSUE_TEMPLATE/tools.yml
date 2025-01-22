@@ -1,34 +1,28 @@
 name: Add FOSS Compliance Tool
 description: |
- Use this issue template to add your tool. The data will be included in a FOSS compliance tool landscape, shared as a digital commons under a CC-BY-SA-4.0 license. 
-
+ Use this issue template to add your tool. This data is under a CC-BY-SA-4.0 license. Put the name of your tool in the issue title.
 
 title: "Tool name: "
 
-labels: ["community"]
-projects: ["aboutcode-org/17"]
+labels: ["foss-tool"]
+
 body:
-
-  - type: markdown
-    attributes:
-      value: |
-        Add your tool's name as the title for this issue. 
-
-  - type: input
-    id: project_email_contact
-    attributes:
-      label: "project_email_contact"
-      description: "How can someone get in touch for more information?"
-      placeholder: ex. email@example.com
-    validations:
-      required: true
 
   - type: input
     id: homepage_url
     attributes:
       label: "homepage_url"
-      description: "What is your project's homepage?"
-      placeholder: ex. https://fosscompliancetool.org
+      description: "Your project's homepage"
+      placeholder: ex. https://foxxcomplianztoolz.org
+    validations:
+      required: true
+
+  - type: input
+    id: contact_email
+    attributes:
+      label: "contact_email"
+      description: "Contact email to get in touch for more information"
+      placeholder: ex. email@example.com
     validations:
       required: true
 
@@ -36,25 +30,25 @@ body:
     id: code_view_url
     attributes:
       label: "code_view_url"
-      description: "Where is your project's code hosted?"
-      placeholder: ex. https://github.com/org/repo
+      description: "URl to your code repo"
+      placeholder: ex. https://github.com/orgz/repoz
     validations:
       required: true
 
   - type: input
-    id: license_expression
+    id: spdx_license_expression
     attributes:
-      label: "license_expression"
-      description: "Please add the [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/) for your tool"
+      label: "spdx_license_expression"
+      description: "Your tool's primary license as an [SPDX license expression](https://spdx.github.io/spdx-spec/v2-draft/SPDX-license-expressions/)"
       placeholder: ex. MIT AND (LGPL-2.1-or-later OR BSD-3-Clause)
     validations:
       required: true
 
   - type: textarea
-    id: summary
+    id: description
     attributes:
-      label: "summary"
-      description: "Please provide a brief summary of your tool - under 100 characters."
+      label: "description"
+      description: "A brief description of your tool. Try to stay under 100 words."
       placeholder: Tell us all about your tool!
     validations:
       required: true
@@ -63,76 +57,123 @@ body:
     id: primary_languages
     attributes:
       label: "primary_languages"
-      description: "What languages is your tool written in?"
+      description: "Main programming languages used to write your tool as comma separated list."
       placeholder: ex. Python, Javascript
     validations:
       required: true
+
+  - type: textarea
+    id: short_term_roadmap
+    attributes:
+      label: "short_term_roadmap"
+      description: "What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
+    validations:
+      required: true
+
+  - type: textarea
+    id: long_term_roadmap
+    attributes:
+      label: "long_term_roadmap"
+      description: "What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: proprietary_data
+    attributes:
+      label: "proprietary_data"
+      description: "Does your tool depends on proprietary data sources?" 
+      options:
+        - label: Yes, the tool depends on proprietary data sources
+
+  - type: checkboxes
+    id: commercial_features
+    attributes:
+      label: "commercial_features"
+      description: "Is there a commercial version of your tool with different features?" 
+      options:
+        - label: Yes, the tool has a commercial version with different/additional features
 
   - type: checkboxes
     id: capabilities
     attributes:
       label: "capabilities"
-      description: "What capabilities does your tool provide? The list is based loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities)."
+      description: "What features and capabilities does your tool provide? This list is based very loosely on capabilities defined by [OpenChain Project Tooling Work Group](https://github.com/Open-Source-Compliance/Sharing-creates-value/tree/master/Tooling-Landscape/Capabilities). If this does not match your tool, use the other_capabilities input, or submit a PR to add more!"
+
       options:
-        - label: Analyze binaries
-        - label: Analyze code statically for issues
-        - label: Analyze containers
-        - label: Analyze ELF binaries
-        - label: Analyze package files
-        - label: Analyze package manifests
-        - label: Analyze source code
-        - label: Analyze Windows binaries
-        - label: Define and check against policies
-        - label: Download source package
-        - label: Find vulnerabilities in packages 
-        - label: Fulfill compliance obligations
-        - label: Generate compliance documents
-        - label: Generate CycloneDx SBOMs
-        - label: Generate SPDX SBOMs
-        - label: Generate VEX information
-        - label: Inventory for packages and components
-        - label: License obligations database
-        - label: Provide database of license obligations
-        - label: Provide database of package metadata
-        - label: Provide database of vulnerabilities
-        - label: Resolve dependencies
-        - label: Scan for copyright
-        - label: Scan for license
-        - label: Support deployment as containers (Docker/k8s/etc)
-        - label: Support running in CI/CD pipelines
-        - label: Support showing/scanning the dependency graph
-        - label: Support use as a library
         - label: Use Package-URL (PURL) identifiers
+        - label: Use SPDX license expressions
+
+        - label: Scanning - Analyze package manifests and lockfiles
+        - label: Scanning - Analyze package files
+        - label: Scanning - Scan for copyright
+        - label: Scanning - Scan for license
+        - label: Scanning - Analyze source code
+        - label: Scanning - Analyze containers
+        - label: Scanning - Analyze installed system packages (linux distros)
+        - label: Scanning - Analyze installed application packages
+        - label: Scanning - Other analysis
+
+        - label: Packages - Inventory packages
+        - label: Packages - Inventory packages dependencies
+        - label: Packages - Resolve dependencies
+        - label: Packages - Navigate or display dependency graph
+
+        - label: Compliance - Generate CycloneDX SBOMs
+        - label: Compliance - Generate SPDX SBOMs
+        - label: Compliance - Generate CycloneDX VEX
+        - label: Compliance - Generate CSAF VEX
+        - label: Compliance - Generate OpenVex
+        - label: Compliance - Generate other compliance documents
+
+        - label: Policies - Define and check license policies
+        - label: Policies - Define and check security policies
+        - label: Policies - Define and check other policies
+
+        - label: Data - Database of Package metadata
+        - label: Data - Database of Package dependency relationships
+        - label: Data - Database of License obligations
+        - label: Data - Database of Licenses
+        - label: Data - Database of Vulnerabilities
+
+        - label: License - Help triage license issues 
+        - label: License - Generate license credit and attribution notices
+        - label: License - Generate source code redistribution lists
+
+        - label: Vulnerabilities - Detect vulnerable code in packages 
+        - label: Vulnerabilities - Find known vulnerabilities for package
+        - label: Vulnerabilities - Determine reachable vulnerabilities 
+        - label: Vulnerabilities - Help triage vulnerabilities 
+
+        - label: Binaries - Analyze binaries
+        - label: Binaries - Analyze ELF binaries
+        - label: Binaries - Analyze Windows binaries
+        - label: Binaries - Analyze firmware binaries
+        - label: Binaries - Analyze Other binaries
+
+        - label: Matching - Match source code
+        - label: Matching - Match binary code
+
+        - label: Tracing - Trace code execution
+        - label: Tracing - Trace build
+
+        - label: Analyze code statically (SAST/linting)
+        - label: Analyze code dynamically (DAST)
+
+        - label: Download - source package
+        - label: Download - source repositories
+        - label: Download - binary package
+
+        - label: Deployment - Deployable as containers (Docker/OCI/k8s/etc)
+        - label: Deployment - Deployable in CI/CD pipelines
+        - label: Deployment - Deployable as a library
+
+        - label: Run - Run as a command line tool
+        - label: Run - Run as a web application
+        - label: Run - Run as an API service
+
   - type: textarea
-    id: capabilities_other
+    id: other_capabilities
     attributes:
-      label: "capabilities_other"
-      description: "List other capabilities not included above." 
-  - type: textarea
-    id: roadmap_short
-    attributes:
-      label: "roadmap_short"
-      description: "What is planned for your tool in the next 3-6 months? You can also include a URL if there is a public roadmap available."
-  - type: textarea
-    id: roadmap_long
-    attributes:
-      label: "roadmap_long"
-      description: "What is planned for your tool after the next 6 months? You can also include a URL if there is a public roadmap available."
-  - type: checkboxes
-    id: features_commercial
-    attributes:
-      label: "features_commercial"
-      description: "Is there a commercial version of your tool that provides additional features for users?" 
-      options:
-        - label: Yes, the tool has a commercial version with additional features
-  - type: checkboxes
-    id: data_commercial
-    attributes:
-      label: "data_commercial"
-      description: "Does your tool use proprietary data sources?" 
-      options:
-        - label: Yes, the tools uses proprietary data sources
-  - type: markdown
-    attributes:
-      value: |
-        By submitting this form, you confirm that the data provided above is accurate and agree to follow our [Code of Conduct](https://github.com/aboutcode-org/workshop/blob/main/CODE_OF_CONDUCT.rst).
+      label: "other_capabilities"
+      description: "List other capabilities not included above, or submit a PR to update the template." 
